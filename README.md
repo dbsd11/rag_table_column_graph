@@ -23,4 +23,4 @@ dependency
   ```
 
 ## notice
-* You need manully run script rag_graphiti_graph.py to create episodes, table column nodes, and embedings of table table_structures in the "table_structures" directory. The correctness of the graph data in neo4j, determines the agent response correctness
+* You need manully run script rag_graphiti_graph.py to create episodes, table column nodes, and embedings of table structures in the "table_structures" directory. The correctness of the graph data in neo4j, determines the agent response correctness
