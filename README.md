@@ -3,7 +3,7 @@ rag on database table column graph
 
 ## design
 
-1. graphiti
+1. [graphiti](https://github.com/getzep/graphiti)
    * based on graphiti to add episodes, table column nodes, and embedings
 
 ## useage
