@@ -1,0 +1,4 @@
+TABLE_SCHEMA,TABLE_NAME,TABLE_COMMENT,COLUMN_NAME,COLUMN_COMMENT,DATA_TYPE
+default,demo,demo_table_name,id,id,int
+default,demo,demo_table_name,name,name,varchar
+default,demo,demo_table_name,parent_id,parent_id,int
