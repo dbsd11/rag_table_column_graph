@@ -104,20 +104,20 @@ async def ingest_table_column_graph_data(client: Graphiti, center_node_uuid: str
     table_structures_dir = script_dir / 'table_structures'
     csv_files = list(table_structures_dir.glob('*.csv'))
 
+    # for each csv fie 
     for csv_file in csv_files:
         with open(csv_file, 'r', encoding='utf-8') as file:
-            # 跳过标题行
+            # skip header
             next(file)
-            # 读取所有行
+            # read all lines
             rows = [line.strip().split(',') for line in file]
-        
-            # 为每个表创建一个episode
+            
             if rows:
-                schema_name = rows[0][0]  # SCHEMA_NAME在第一列
-                table_name = rows[0][1]  # TABLE_NAME在第二列
-                table_comment = rows[0][2]  # TABLE_COMMENT在第三列
+                schema_name = rows[0][0]  # SCHEMA_NAME at index 0
+                table_name = rows[0][1]  # TABLE_NAME at index 1
+                table_comment = rows[0][2]  # TABLE_COMMENT at index 2
                 
-                # 构建表结构信息
+                # column informations
                 columns = [{
                     'column_name': row[3],  # COLUMN_NAME
                     'column_comment': row[4],  # COLUMN_COMMENT
